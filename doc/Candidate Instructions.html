@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://scopicsoftware.codeaid.io/4801/challenge?token=ljScPAzRVh -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Candidate Instructions</title>
+        
+        <link rel="icon" type="image/png" href="https://scopicsoftware.codeaid.io/img/logo.png?v=20220419">
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link href="./Candidate Instructions_files/css2" rel="stylesheet">
+        <link rel="stylesheet" href="./Candidate Instructions_files/flatpickr.min.css">
+        <link rel="stylesheet" href="./Candidate Instructions_files/app.css">
+        <link rel="stylesheet" href="./Candidate Instructions_files/prism.css">
+        <link rel="stylesheet" href="./Candidate Instructions_files/cropper.min.css" integrity="sha512-0SPWAwpC/17yYyZ/4HSllgaK7/gg9OlVozq8K7rf3J8LvCjYEEIfzzpnA2/SSjpGIunCSD18r3UhvDcu/xncWA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+    
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Candidate Instructions_files/w.js.download"></script><script type="text/javascript" async="" src="./Candidate Instructions_files/js"></script><script type="text/javascript" async="" src="./Candidate Instructions_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Candidate Instructions_files/js(1)"></script><script async="" src="./Candidate Instructions_files/gtm.js.download"></script><script async="" src="./Candidate Instructions_files/js(2)"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NCPE4585XB');
+
+    </script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PT4H4MB');</script>
+<!-- End Google Tag Manager -->
+                
+    <script charset="utf-8" src="./Candidate Instructions_files/148-ecf432e170be870ad4bb.js.download"></script></head>
+    
+    <body class="antialiased font-open-sans bg-app-background line-numbers" x-data="{
+            loaderState: false,
+            showLoader(value) { this.loaderState = value}
+        }" @loader.window="showLoader($event.detail.state)">
+        
+                <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT4H4MB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+                
+        <div wire:id="IdEHA2heFmHkdfxWgLkM" x-data="{
+        showGeneratingRepositoryModal: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;showGeneratingRepositoryModal&#39;),
+        showInstructionsModal: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;showInstructionsModal&#39;),
+        processing: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;processing&#39;),
+        scrollToInstructionsModal: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;scrollToInstructionsModal&#39;),
+        updateTimeLineHeight() {
+            let $leftColumn = document.getElementById(&#39;instructions-left-column&#39;);
+            let $rightColumn = document.getElementById(&#39;instructions-right-column&#39;);
+            
+            let leftColumnBounds = $leftColumn.getBoundingClientRect();
+            let rightColumnBounds = $rightColumn.getBoundingClientRect();
+            
+            if(leftColumnBounds.height &gt; rightColumnBounds.height) {
+                let heightDifference = leftColumnBounds.height - rightColumnBounds.height - 30;
+                let $timeline = document.getElementById(&#39;instructions-timeline&#39;);
+                let timelineBounds = $timeline.getBoundingClientRect();
+                $timeline.style.setProperty(&#39;height&#39;, `${timelineBounds.height - heightDifference}px`);
+            }
+        }
+    }" x-init="
+    
+    // being challenge when
+    $watch(&#39;showGeneratingRepositoryModal&#39;, value =&gt; value &amp;&amp; processing &amp;&amp; $wire.beginChallenge());
+    $watch(&#39;processing&#39;, value =&gt; value &amp;&amp; showGeneratingRepositoryModal &amp;&amp; $wire.beginChallenge());
+    
+    $watch(&#39;scrollToInstructionsModal&#39;, value =&gt; {
+        if(value === true) {
+            document.getElementById(&#39;candidate-instructions-area&#39;).scrollIntoView({behavior: &#39;smooth&#39;});
+            updateTimeLineHeight();
+        }
+    })
+    
+    $nextTick(() =&gt; updateTimeLineHeight())
+    ">
+    <div class="flex flex-wrap items-start">
+        <div class="w-full md:w-5/12 lg:w-4/12 pl-0 md:pl-3 md:pb-8" id="instructions-left-column">
+            <div class="bg-white rounded-lg shadow-sm p-6 m-4 md:p-7 h-full" :class="!challenge_content ? &#39;&#39; : &#39;h-full&#39;" x-data="{challenge_content:((window.innerWidth &gt; 0) ? window.innerWidth : screen.width) &gt;= 768}">
+                <a href="https://scopicsoftware.codeaid.io/" class="text-primary text-2xl font-bold">
+                    <div class="flex items-center space-x-3 leading-7">
+                        <img src="./Candidate Instructions_files/logo-colorful.svg" class="inline-block h-7">
+                        <span class="hidden">Logo link</span>
+                    </div>
+                </a>
+                <div class="block md:hidden float-right -mt-8">
+                        <div wire:id="Fkdz5OAPTT5GrkPfvcSu">
+     <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4   border-primary text-primary font-semibold hover:border-middle hover:text-middle flex items-center space-x-1 font-semibold bg-dark-cultured border-0" wire:click.prevent="$set(&#39;showModal&#39;, true)">
+        <span class="text-xs font-semibold text-primary">Help ?</span>
+    </button>
+  
+
+    <form wire:submit.prevent="sendMessage">
+         <div x-data="{
+        rootData: {
+            autoClose: true,
+            focusables() {
+                // All focusable element types...
+                let selector = &#39;a, button, input, textarea, select, details, [tabindex]:not([tabindex=\&#39;-1\&#39;])&#39;
+
+                return [...$el.querySelectorAll(selector)]
+                    // All non-disabled elements...
+                    .filter(el =&gt; ! el.hasAttribute(&#39;disabled&#39;))
+            },
+            firstFocusable() { return this.focusables()[0] },
+            lastFocusable() { return this.focusables().slice(-1)[0] },
+            nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },
+            prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },
+            nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },
+            prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },
+            autofocus() { let focusable = $el.querySelector(&#39;[autofocus]&#39;); if (focusable) focusable.focus() },
+            closeModal() { this.autoClose ? this.show = false : $dispatch(&#39;close-modal&#39;) }
+        }
+    }">
+<div x-data="{
+        show: window.Livewire.find(&#39;Fkdz5OAPTT5GrkPfvcSu&#39;).entangle(&#39;showModal&#39;),
+        ...rootData,
+    }" x-init="
+        $watch(&#39;show&#39;, (value) =&gt; {
+            if(value) {
+                setTimeout(autofocus, 50);
+                $dispatch(&#39;opened&#39;);
+            } else $dispatch(&#39;closed&#39;);
+        });
+    " x-on:close.stop="closeModal()" x-on:keydown.escape.window="closeModal()" x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()" x-on:keydown.shift.tab.prevent="prevFocusable().focus()" x-show="show" id="3423a5db4347ebcddb7b60db0c93b0a4" class="popup fixed top-0 inset-x-0 z-50 px-0 flex items-top justify-center h-full " style="display: none;">
+    <div x-show="show" class="fixed inset-0 transform transition-all" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+        <div class="absolute inset-0 bg-grey opacity-75"></div>
+    </div>
+
+    <div x-show="show" class="popup-content flex flex-col absolute top-1/2 left-1/2 bg-white rounded-lg shadow-xl transform transition-all w-11/12 sm:w-full max-h-11/12 overflow-auto  sm:max-w-2xl" style="transform: translate(-50%, -50%) !important; display: none;" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                 <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  transition-colors duration-300 ease-linear py-2 px-4 font-bold text-primary hover:text-middle  absolute top-0 right-0 lg:top-2 lg:right-2 text-2xl" @click.prevent="closeModal()">
+        <em class="kdfi-close"></em>
+            <span class="hidden">Close Modal</span>
+    </button>
+  
+                
+        <div class="flex flex-col flex-grow overflow-y-auto px-4 sm:px-24 pt-6 lg:pt-4 pb-4">
+        <div class="text-2xl text-primary font-bold text-center mb-3 sm:mb-10">
+            <span class="text-primary">Help Request</span>
+                <div class="mt-4 text-light-black text-base font-normal">
+                    Let us help you with any questions you have 
+                </div>
+        </div>
+
+        
+        <div class="flex-grow mt-4">
+            <div class="mb-7">
+                     <div x-data="{
+                    modelValue: window.Livewire.find(&#39;Fkdz5OAPTT5GrkPfvcSu&#39;).entangle(&#39;subject&#39;).defer,
+                
+        value: null
+    }" x-init="
+        value = $wire.get(&#39;subject&#39;);
+        
+        if(value === undefined) {
+            value = null
+        }
+        
+        $watch(&#39;modelValue&#39;, newVal =&gt; {
+            value = newVal
+        })
+    ">
+        
+    <div class="flex flex-wrap items-stretch relative items-center border rounded-md w-full p-3   input-container bg-input-cultured border-grey-v2" :class="{&#39;filled&#39;: value}">
+        
+                
+            
+    
+                    <input type="text" class="flex-shrink flex-grow flex-auto leading-normal w-px flex-1 bg-transparent border-0 self-center relative outline-none text-left text-grey-v2 " autocomplete="off" wire:model.defer="subject" placeholder="Subject" @focusin="event.target.closest(&#39;.input-container&#39;).classList.add(&#39;focused&#39;)" @focusout="event.target.closest(&#39;.input-container&#39;).classList.remove(&#39;focused&#39;)" x-model="value">
+                
+                
+            </div>
+    
+    </div> 
+                </div>
+
+                <div class="mb-7">
+                     <div class="flex flex-col h-full" x-data="{
+        modelValue: window.Livewire.find(&#39;Fkdz5OAPTT5GrkPfvcSu&#39;).entangle(&#39;message&#39;).defer,
+        value: null
+    }" x-init="
+        value = $wire.get(&#39;message&#39;);
+        
+        if(value === undefined) {
+            value = null
+        }
+        
+        $watch(&#39;modelValue&#39;, newVal =&gt; {
+            value = newVal
+        });
+        
+        $watch(&#39;value&#39;, value =&gt; {
+            $dispatch(&#39;updated&#39;, {value})
+        });
+    ">
+        
+    <div class="flex-grow input-container flex border py-3.5 px-5 bg-cultured border-grey-v2 rounded-md shadow-sm overflow-hidden" :class="{&#39;filled&#39;: value}">
+        <textarea @focusin="event.target.closest(&#39;.input-container&#39;).classList.add(&#39;focused&#39;)" @focusout="event.target.closest(&#39;.input-container&#39;).classList.remove(&#39;focused&#39;)" rows="8" class="form-textarea block w-full bg-transparent transition outline-none duration-150 ease-in-out text-grey-v2  resize-none dark-cultured" wire:model.defer="message" placeholder="Write your question here..." maxlength="1000" @keydown.enter="submit" @keyup="content = $event.target.value" x-model="value"></textarea>
+    
+            </div>
+    
+    </div>
+ 
+                </div>
+        </div>
+    </div>
+
+    <div class="px-5 sm:px-24 py-4 bg-gray-100 text-right">
+        <div class="flex flex-wrap items-center justify-center space-y-3 sm:space-y-0 -mx-2">
+                    <div class="w-full sm:w-1/2 px-2">
+                         <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 border  border-primary text-primary font-semibold hover:border-middle hover:text-middle w-full py-3 rounded-lg" wire:click="$toggle(&#39;showModal&#39;)" wire:loading.attr="disabled" wire:loading.class="cursor-not-allowed" wire:target="sendMessage">
+        <span>Cancel</span>
+    </button>
+  
+                    </div>
+                    
+                    <div class="w-full sm:w-1/2 px-2">
+                         <button type="submit" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 font-bold border  text-white bg-primary hover:bg-middle border-primary hover:border-middle w-full py-3 rounded-lg" wire:loading.attr="disabled" wire:loading.class="cursor-not-allowed" wire:target="sendMessage">
+        <span class="flex items-center justify-center hidden" wire:loading.class.remove="hidden" wire:target="sendMessage">
+                                 <span class="text-white">
+    <svg class="animate-spin -ml-1 mr-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+</span> 
+                                <span>Processing</span>
+                            </span>
+        
+                            <span wire:loading.class="hidden" wire:target="sendMessage">Send</span>
+    </button>
+ 
+ 
+                    </div>
+                </div>
+    </div>
+    </div>
+</div>
+</div> 
+ 
+     </form> 
+</div>
+
+<!-- Livewire Component wire-end:Fkdz5OAPTT5GrkPfvcSu -->                    </div>
+                <p class="text-grey text-xs font-medium pt-8 leading-5">Challenge</p>
+                <h2 class="text-secondary text-xl font-bold leading-8">Find The Path Mini-Game
+                    <div class="md:hidden float-right" @click="challenge_content = !challenge_content">
+                        <i :class="challenge_content ? &#39;text-primary kdfi-arrow inline-flex transform&#39; : &#39;text-primary kdfi-arrow inline-flex transform rotate-180&#39;" class="text-primary kdfi-arrow inline-flex transform"></i>
+                    </div>
+                </h2>
+                <div class="flex flex-col flex-grow" x-show="challenge_content">
+                    <div>
+                        <p class="text-grey text-xs font-bold leading-5 pt-4">CANDIDATE NAME:<span class="font-semibold text-black text-sm pl-1 lg:inline md:block md:pl-0"> Thuyet Pham Van</span></p>
+                        <p class="text-grey text-xs font-bold leading-5 pt-1">ORGANIZATION:<span class="font-semibold text-black text-sm pl-1 lg:inline md:block md:pl-0"> Scopic Software</span></p>
+                        <p class="text-grey text-xs font-bold leading-5 pt-1">TECHNOLOGY:<span class="font-semibold text-black text-sm pl-1 lg:inline md:block md:pl-0"> C++</span></p>
+                                                <p class="text-grey text-xs font-bold leading-5 pt-1">
+                            START DATE/TIME:
+                            <span class="font-semibold text-black text-sm pl-1 lg:inline md:block md:pl-0">
+                                                                     <span x-data="{
+        showLocalTime(dateInUtc) {
+            let d = new Date(dateInUtc);
+            let hours = d.getHours();
+            let pm = &#39;AM&#39;;
+    
+            if (hours &gt;= 12) {
+                hours = hours - 12;
+                if(hours == 0){
+                    hours = 12;
+                }
+                pm = &#39;PM&#39;;
+            }
+    
+            return (&#39;0&#39; + (d.getMonth() + 1)).slice(-2) + &#39;/&#39; + (&#39;0&#39; + d.getDate()).slice(-2) + &#39;/&#39; +  d.getFullYear() + &#39; &#39; + (&#39;0&#39; + hours).slice(-2) + &#39;:&#39; + (&#39;0&#39; + d.getMinutes()).slice(-2) + &#39; &#39; + pm;
+        }
+    }">
+            <span>N/A</span>
+    </span> 
+                                                            </span>
+                        </p>
+                        <p class="text-grey text-xs font-bold leading-5 pt-1">
+                            DUE DATE/TIME:
+                            <span class="font-semibold text-black text-sm pl-1 lg:inline md:block md:pl-0">
+                                                                     <span x-data="{
+        showLocalTime(dateInUtc) {
+            let d = new Date(dateInUtc);
+            let hours = d.getHours();
+            let pm = &#39;AM&#39;;
+    
+            if (hours &gt;= 12) {
+                hours = hours - 12;
+                if(hours == 0){
+                    hours = 12;
+                }
+                pm = &#39;PM&#39;;
+            }
+    
+            return (&#39;0&#39; + (d.getMonth() + 1)).slice(-2) + &#39;/&#39; + (&#39;0&#39; + d.getDate()).slice(-2) + &#39;/&#39; +  d.getFullYear() + &#39; &#39; + (&#39;0&#39; + hours).slice(-2) + &#39;:&#39; + (&#39;0&#39; + d.getMinutes()).slice(-2) + &#39; &#39; + pm;
+        }
+    }">
+            <span>N/A</span>
+    </span> 
+                                                            </span>
+                        </p>
+                                            </div>
+                    
+                    
+                                            <div class="">
+                             <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 font-bold border  text-white bg-primary hover:bg-middle border-primary hover:border-middle w-full md:w-auto font-bold leading-5 my-5" @click.prevent="showGeneratingRepositoryModal = true">
+        Begin Challenge
+    </button>
+ 
+ 
+                        </div>
+                                        
+                    <hr class="text-dark-cultured">
+
+                                            <div class="mb-5 text-dark-grey">
+                            <p class="font-bold text-base text-black leading-6 py-3">General Description</p>
+                            <div class="rich-text text-dark-grey font-normal text-sm leading-5 text-left">
+                                <p>Welcome to the Find the Path project. The goal of the project is to implement a solver for the mini-game explained in the requirements below.&nbsp;</p>
+                            </div>
+                        </div>
+                                        <hr class="text-dark-cultured">
+                    <div class="flex-grow">
+                        <div class="text-black font-semibold">
+                            <p class="font-bold text-base leading-6 py-3">
+                                Timeline
+                            </p>
+                        </div>
+                        <div class="block container">
+                            <div class="flex flex-col pl-0 grid text-light-black overflow-y-auto" id="instructions-timeline">
+                                        
+                                    
+                                            
+                                     <div class="flex">
+    <div class="col-start-2 col-end-4 mr-10 relative ml-3">
+        <div class="h-full w-6 flex items-center justify-center">
+            <div class="h-full w-0.5 bg-dark-cultured pointer-events-none"></div>
+        </div>
+        <div class="w-12 h-12 absolute top-0 -ml-3 pb-9 rounded-full text-center bg-dark-cultured rounded-full text-2xl text-grey-v2 pt-2">
+            <i class="kdfi-bell-2"></i>
+        </div>
+    </div>
+    <div class="col-start-4 col-end-12 mb-8 w-full relative" x-data="{opentl_103125:false}">
+        <div class="text-light-black font-bold mt-2 text-sm">
+            Candidate reminded
+            <div class="inline-block cursor-pointer pl-3" @click="opentl_103125 = !opentl_103125">
+                <i class="flex kdfi-arrow text-primary transform -rotate-90 transition duration-300 ease-linear" :class="{&#39;transform -rotate-90&#39;: !opentl_103125}"></i>
+            </div>
+        </div>
+        <div class="text-grey text-xs">
+                             <span x-data="{
+        showLocalTime(dateInUtc) {
+            let d = new Date(dateInUtc);
+            let hours = d.getHours();
+            let pm = &#39;AM&#39;;
+    
+            if (hours &gt;= 12) {
+                hours = hours - 12;
+                if(hours == 0){
+                    hours = 12;
+                }
+                pm = &#39;PM&#39;;
+            }
+    
+            return (&#39;0&#39; + (d.getMonth() + 1)).slice(-2) + &#39;/&#39; + (&#39;0&#39; + d.getDate()).slice(-2) + &#39;/&#39; +  d.getFullYear() + &#39; &#39; + (&#39;0&#39; + hours).slice(-2) + &#39;:&#39; + (&#39;0&#39; + d.getMinutes()).slice(-2) + &#39; &#39; + pm;
+        }
+    }">
+            <span x-text="showLocalTime(&#39;2023-06-09T14:13:26+00:00&#39;)">06/09/2023 09:13 PM</span>
+    </span> 
+                    </div>
+        <div x-show="opentl_103125" class="bg-cultured text-black rounded-md p-3 mt-2 text-sm" style="display: none">
+            A reminder to begin the challenge has been sent to you.
+        </div>
+    </div>
+</div> 
+                                        
+                                    
+                                            
+                                     <div class="flex">
+    <div class="col-start-2 col-end-4 mr-10 relative ml-3">
+        <div class="h-full w-6 flex items-center justify-center">
+            <div class="h-full w-0.5 bg-dark-cultured pointer-events-none"></div>
+        </div>
+        <div class="w-12 h-12 absolute top-0 -ml-3 pb-9 rounded-full text-center bg-dark-cultured rounded-full text-2xl text-grey-v2 pt-2">
+            <i class="kdfi-message-outline"></i>
+        </div>
+    </div>
+    <div class="col-start-4 col-end-12 mb-8 w-full relative" x-data="{opentl_103054:false}">
+        <div class="text-light-black font-bold mt-2 text-sm">
+            Candidate invited
+            <div class="inline-block cursor-pointer pl-3" @click="opentl_103054 = !opentl_103054">
+                <i class="flex kdfi-arrow text-primary transform -rotate-90 transition duration-300 ease-linear" :class="{&#39;transform -rotate-90&#39;: !opentl_103054}"></i>
+            </div>
+        </div>
+        <div class="text-grey text-xs">
+                             <span x-data="{
+        showLocalTime(dateInUtc) {
+            let d = new Date(dateInUtc);
+            let hours = d.getHours();
+            let pm = &#39;AM&#39;;
+    
+            if (hours &gt;= 12) {
+                hours = hours - 12;
+                if(hours == 0){
+                    hours = 12;
+                }
+                pm = &#39;PM&#39;;
+            }
+    
+            return (&#39;0&#39; + (d.getMonth() + 1)).slice(-2) + &#39;/&#39; + (&#39;0&#39; + d.getDate()).slice(-2) + &#39;/&#39; +  d.getFullYear() + &#39; &#39; + (&#39;0&#39; + hours).slice(-2) + &#39;:&#39; + (&#39;0&#39; + d.getMinutes()).slice(-2) + &#39; &#39; + pm;
+        }
+    }">
+            <span x-text="showLocalTime(&#39;2023-06-07T14:13:24+00:00&#39;)">06/07/2023 09:13 PM</span>
+    </span> 
+                    </div>
+        <div x-show="opentl_103054" class="bg-cultured text-black rounded-md p-3 mt-2 text-sm" style="display: none">
+            You have been invited <br>
+    Challenge: <span class="italic">Find the Path Mini-Game</span> <br>
+    Time limit: <span class="italic">72 hours</span> <br>
+        </div>
+    </div>
+</div> 
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full md:w-7/12 lg:w-8/12 flex flex-col flex-screen" id="instructions-right-column">
+            
+            <div class="hidden md:block absolute top-10 right-10">
+                <div wire:id="FCsyeQFlgAd8MCMmkg4a">
+     <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4   border-primary text-primary font-semibold hover:border-middle hover:text-middle flex items-center space-x-1 font-semibold bg-dark-cultured border-0" wire:click.prevent="$set(&#39;showModal&#39;, true)">
+        <span class="text-xs font-semibold text-primary">Help ?</span>
+    </button>
+  
+
+    <form wire:submit.prevent="sendMessage">
+         <div x-data="{
+        rootData: {
+            autoClose: true,
+            focusables() {
+                // All focusable element types...
+                let selector = &#39;a, button, input, textarea, select, details, [tabindex]:not([tabindex=\&#39;-1\&#39;])&#39;
+
+                return [...$el.querySelectorAll(selector)]
+                    // All non-disabled elements...
+                    .filter(el =&gt; ! el.hasAttribute(&#39;disabled&#39;))
+            },
+            firstFocusable() { return this.focusables()[0] },
+            lastFocusable() { return this.focusables().slice(-1)[0] },
+            nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },
+            prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },
+            nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },
+            prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },
+            autofocus() { let focusable = $el.querySelector(&#39;[autofocus]&#39;); if (focusable) focusable.focus() },
+            closeModal() { this.autoClose ? this.show = false : $dispatch(&#39;close-modal&#39;) }
+        }
+    }">
+<div x-data="{
+        show: window.Livewire.find(&#39;FCsyeQFlgAd8MCMmkg4a&#39;).entangle(&#39;showModal&#39;),
+        ...rootData,
+    }" x-init="
+        $watch(&#39;show&#39;, (value) =&gt; {
+            if(value) {
+                setTimeout(autofocus, 50);
+                $dispatch(&#39;opened&#39;);
+            } else $dispatch(&#39;closed&#39;);
+        });
+    " x-on:close.stop="closeModal()" x-on:keydown.escape.window="closeModal()" x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()" x-on:keydown.shift.tab.prevent="prevFocusable().focus()" x-show="show" id="3423a5db4347ebcddb7b60db0c93b0a4" class="popup fixed top-0 inset-x-0 z-50 px-0 flex items-top justify-center h-full " style="display: none;">
+    <div x-show="show" class="fixed inset-0 transform transition-all" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+        <div class="absolute inset-0 bg-grey opacity-75"></div>
+    </div>
+
+    <div x-show="show" class="popup-content flex flex-col absolute top-1/2 left-1/2 bg-white rounded-lg shadow-xl transform transition-all w-11/12 sm:w-full max-h-11/12 overflow-auto  sm:max-w-2xl" style="transform: translate(-50%, -50%) !important; display: none;" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                 <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  transition-colors duration-300 ease-linear py-2 px-4 font-bold text-primary hover:text-middle  absolute top-0 right-0 lg:top-2 lg:right-2 text-2xl" @click.prevent="closeModal()">
+        <em class="kdfi-close"></em>
+            <span class="hidden">Close Modal</span>
+    </button>
+  
+                
+        <div class="flex flex-col flex-grow overflow-y-auto px-4 sm:px-24 pt-6 lg:pt-4 pb-4">
+        <div class="text-2xl text-primary font-bold text-center mb-3 sm:mb-10">
+            <span class="text-primary">Help Request</span>
+                <div class="mt-4 text-light-black text-base font-normal">
+                    Let us help you with any questions you have 
+                </div>
+        </div>
+
+        
+        <div class="flex-grow mt-4">
+            <div class="mb-7">
+                     <div x-data="{
+                    modelValue: window.Livewire.find(&#39;FCsyeQFlgAd8MCMmkg4a&#39;).entangle(&#39;subject&#39;).defer,
+                
+        value: null
+    }" x-init="
+        value = $wire.get(&#39;subject&#39;);
+        
+        if(value === undefined) {
+            value = null
+        }
+        
+        $watch(&#39;modelValue&#39;, newVal =&gt; {
+            value = newVal
+        })
+    ">
+        
+    <div class="flex flex-wrap items-stretch relative items-center border rounded-md w-full p-3   input-container bg-input-cultured border-grey-v2" :class="{&#39;filled&#39;: value}">
+        
+                
+            
+    
+                    <input type="text" class="flex-shrink flex-grow flex-auto leading-normal w-px flex-1 bg-transparent border-0 self-center relative outline-none text-left text-grey-v2 " autocomplete="off" wire:model.defer="subject" placeholder="Subject" @focusin="event.target.closest(&#39;.input-container&#39;).classList.add(&#39;focused&#39;)" @focusout="event.target.closest(&#39;.input-container&#39;).classList.remove(&#39;focused&#39;)" x-model="value">
+                
+                
+            </div>
+    
+    </div> 
+                </div>
+
+                <div class="mb-7">
+                     <div class="flex flex-col h-full" x-data="{
+        modelValue: window.Livewire.find(&#39;FCsyeQFlgAd8MCMmkg4a&#39;).entangle(&#39;message&#39;).defer,
+        value: null
+    }" x-init="
+        value = $wire.get(&#39;message&#39;);
+        
+        if(value === undefined) {
+            value = null
+        }
+        
+        $watch(&#39;modelValue&#39;, newVal =&gt; {
+            value = newVal
+        });
+        
+        $watch(&#39;value&#39;, value =&gt; {
+            $dispatch(&#39;updated&#39;, {value})
+        });
+    ">
+        
+    <div class="flex-grow input-container flex border py-3.5 px-5 bg-cultured border-grey-v2 rounded-md shadow-sm overflow-hidden" :class="{&#39;filled&#39;: value}">
+        <textarea @focusin="event.target.closest(&#39;.input-container&#39;).classList.add(&#39;focused&#39;)" @focusout="event.target.closest(&#39;.input-container&#39;).classList.remove(&#39;focused&#39;)" rows="8" class="form-textarea block w-full bg-transparent transition outline-none duration-150 ease-in-out text-grey-v2  resize-none dark-cultured" wire:model.defer="message" placeholder="Write your question here..." maxlength="1000" @keydown.enter="submit" @keyup="content = $event.target.value" x-model="value"></textarea>
+    
+            </div>
+    
+    </div>
+ 
+                </div>
+        </div>
+    </div>
+
+    <div class="px-5 sm:px-24 py-4 bg-gray-100 text-right">
+        <div class="flex flex-wrap items-center justify-center space-y-3 sm:space-y-0 -mx-2">
+                    <div class="w-full sm:w-1/2 px-2">
+                         <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 border  border-primary text-primary font-semibold hover:border-middle hover:text-middle w-full py-3 rounded-lg" wire:click="$toggle(&#39;showModal&#39;)" wire:loading.attr="disabled" wire:loading.class="cursor-not-allowed" wire:target="sendMessage">
+        <span>Cancel</span>
+    </button>
+  
+                    </div>
+                    
+                    <div class="w-full sm:w-1/2 px-2">
+                         <button type="submit" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 font-bold border  text-white bg-primary hover:bg-middle border-primary hover:border-middle w-full py-3 rounded-lg" wire:loading.attr="disabled" wire:loading.class="cursor-not-allowed" wire:target="sendMessage">
+        <span class="flex items-center justify-center hidden" wire:loading.class.remove="hidden" wire:target="sendMessage">
+                                 <span class="text-white">
+    <svg class="animate-spin -ml-1 mr-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+</span> 
+                                <span>Processing</span>
+                            </span>
+        
+                            <span wire:loading.class="hidden" wire:target="sendMessage">Send</span>
+    </button>
+ 
+ 
+                    </div>
+                </div>
+    </div>
+    </div>
+</div>
+</div> 
+ 
+     </form> 
+</div>
+
+<!-- Livewire Component wire-end:FCsyeQFlgAd8MCMmkg4a -->            </div>
+            
+                        
+            <div class="bg-white rounded-lg shadow-sm p-6 m-4">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <p class="text-base font-bold text-secondary text-3xl">Challenge Details</p>
+                    </div>
+                </div>
+                                    <div class="pt-4 break-words">
+                        <div class="rich-text text-dark-grey">
+                            <h1 class="font-bold text-3xl mb-3">Project Requirements:</h1>
+<p>&nbsp;</p>
+<p>Find the Path is a simple mini-game containing the following parts:</p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="font-family: inherit;">A </span><strong style="font-family: inherit;">code matrix</strong><span style="font-family: inherit;"> populated with hexadecimal numbers. The matrix can have arbitrary dimensions. It is not necessarily square. </span></li>
+<li>One or more <span style="font-family: inherit;">number </span><strong style="font-family: inherit;">sequences</strong> are to be found inside the matrix. Each found sequence earns you a certain amount of score points.</li>
+<li><strong style="font-family: inherit;">Maximum length of path</strong><span style="font-family: inherit;"> in the code matrix.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p>An example of the input data is shown in the picture below:</p>
+<p>&nbsp;</p>
+<p><img src="./Candidate Instructions_files/YU7cLU3rfxcBE1PKcmyF89RLEi4gFNT2wqXoGEgu.png" alt="Example of a simple puzzle with one sequence " width="840" height="402"></p>
+<p style="text-align: center;"><em>Example of a simple puzzle with one sequence</em></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>Your task is to find the shortest <strong>path </strong>in the code matrix that contains sequences with the largest total score. A path is basically a list of matrix cells that are connected to each other. Length of a path means the number of cells in the list. The shorter the path – the fewer cells it has. The picture below demonstrates the solved puzzle with the resulting path marked in red.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="./Candidate Instructions_files/i2XFatzBk8HLBYaOoJyeKi7Hir9SfNDd61PomkKL.png" alt="Example of the solved puzzle " width="840" height="382"><em>Example of the solved puzzle</em></p>
+<p style="text-align: left;">&nbsp;</p>
+<p>Here, we have a path <span style="color: #169179;">3A-10-9B</span>, which is 3 cells in length. This path contains the given sequence <span style="color: #236fa1;">3A-10-9B</span> that earns you 10 score points. In this simplest example the path actually matches the sequence. More complex puzzles typically have longer paths containing various different sequences at once.</p>
+<p>&nbsp;</p>
+<p>The rules for solving the puzzle are explained in the next section.</p>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Solving the Puzzle</h1>
+<p>Let’s look at the example above. Here, we have only one sequence <span style="color: #236fa1;">3A-10-9B</span>. The goal is to pick the proper cells from the code matrix in proper order to piece together the given code sequence.&nbsp;</p>
+<p>&nbsp;</p>
+<p>The trick is that you can’t choose completely arbitrary cells. You must always start with the top row. Here, we have 5 possible codes to choose from: <span style="color: #169179;">3A</span>, <span style="color: #169179;">3A</span>, <span style="color: #169179;">10</span>, <span style="color: #169179;">9B </span>and <span style="color: #169179;">72</span>. Suppose you have selected <span style="color: #169179;">3A </span>in the second column. It perfectly matches the first element of our code sequence.</p>
+<p>&nbsp;</p>
+<p><img src="./Candidate Instructions_files/xw2064pvYUx794s3TTcQFG1OC6t1t84GPih2bLKB.png" alt="Solving the puzzle – first move " width="840" height="410"></p>
+<p style="text-align: center;"><em>Solving the puzzle - first move</em></p>
+<p>&nbsp;</p>
+<p>Next, you need to choose one cell from the same column as the previous cell you picked. In our case, this is the second column. Let’s pick code 10 in the fourth row matching the second element in our sequence.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="./Candidate Instructions_files/gGCVmEzaOZrCuv5wEzLjbXxaBn45VGztrJkNJRBX.png" alt="Solving the puzzle – second move " width="840" height="410"><em>Solving the puzzle - second move</em></p>
+<p>&nbsp;</p>
+<p>Finally, you need to pick code 9B from the fourth row to complete the sequence.</p>
+<p>&nbsp;</p>
+<p><img src="./Candidate Instructions_files/OLOj5P0MUhdyVRjhpOmgC2yWDWAs8sgRRknvjAmS.png" alt="Solving the puzzle – final move " width="840" height="410"></p>
+<p style="text-align: center;"><em>Solving the puzzle - final move</em></p>
+<p>&nbsp;</p>
+<p>And that’s it. Congratulations on the first solved puzzle! Let’s summarize the learned rules:</p>
+<p>&nbsp;</p>
+<ol>
+<li>&nbsp;At any given moment, you can only choose cells in a specific column or row.</li>
+<li>On each turn, you need to switch between column and row, and you have to stay on the same line as the previous cell you picked. This is similar to Snake game. You have to move at right angles.</li>
+<li>You always start with picking the first cell from the top row, then you always go vertically down in order to pick the second cell, and then you continue switching between column and row as usual.</li>
+<li>You can’t choose the same cell twice. The resulting path must not contain duplicated cells.</li>
+<li><span style="font-family: inherit;">The number of picked cells must not exceed the maximum allowed length of the path.</span></li>
+</ol>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3"><span style="font-family: inherit;">Multiple Sequences</span></h1>
+<p>There can be more than one sequence to complete. The picture below demonstrates the solution for a puzzle with two sequences.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="./Candidate Instructions_files/5YLPqL5oboQv1f0JHiOGqOkNiuj2c13RvT93zpRz.png" alt="Example of a puzzle with two sequences" width="840" height="407"><em>Example of a puzzle with two sequences</em></p>
+<p>&nbsp;</p>
+<p>You can complete sequences in any order. The order in which the sequences are listed doesn’t matter.</p>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Wasted Moves</h1>
+<p>Sometimes we are forced to waste moves and choose additional cells that don’t belong to any sequence. Let’s look at the following example.</p>
+<p>&nbsp;</p>
+<p><img src="./Candidate Instructions_files/tInAEQRP7fQRM6YJM3QhWdUaaON4BglhzstKX3iu.png" alt="Example of a puzzle with one wasted move " width="840" height="406"></p>
+<p style="text-align: center;"><em>Example of a puzzle with one wasted move&nbsp;</em></p>
+<p>&nbsp;</p>
+<p>The sequences <span style="color: #236fa1;">10-D4-72-72</span> and <span style="color: #236fa1;">3A-10-D4</span> start with codes <span style="color: #236fa1;">10 </span>and <span style="color: #236fa1;">3A </span>respectively, but there are no such cells in the first row at all! To deal with this issue, we have to waste one move and choose any other cell, e.g., <span style="color: #169179;">72 </span>in the third column. After that we will be able to continue moving and successfully complete both sequences. The length of the resulting path, including wasted moves, is 6 cells which still fit the given limit.</p>
+<p>&nbsp;</p>
+<p>Notice how the two sequences “overlap” in the resulting path. This is perfectly fine. The more overlapping between sequences – the shorter the resulting path.</p>
+<p>&nbsp;</p>
+<p>In some cases, one wasted move is not enough and we need to waste more of them. The next picture shows a tricky case with three wasted moves in total!</p>
+<p>&nbsp;</p>
+<p><img src="./Candidate Instructions_files/e9t0Suiocf7sQyMwfIoss77bGT6UicK54AvGEg1e.png" alt="Example of a puzzle with three wasted moves" width="840" height="411"></p>
+<p style="text-align: center;"><em>Example of a puzzle with three wasted moves</em></p>
+<p>&nbsp;</p>
+<p>Here, we have to waste one move before the sequence <span style="color: #236fa1;">3A-9B</span> and two moves between sequences <span style="color: #236fa1;">3A-9B</span> and <span style="color: #236fa1;">72-D4</span>. Also notice how red lines between <span style="color: #169179;">3A </span>and <span style="color: #169179;">9B </span>as well as between <span style="color: #169179;">72 </span>and <span style="color: #169179;">D4 </span>“cross” previously selected cells <span style="color: #169179;">D4 </span>and <span style="color: #169179;">9B</span> respectively. This is perfectly allowed. You can pick different cells from the same row or column multiple times.</p>
+<p>&nbsp;</p>
+<p>Let’s summarize the rules shown above:</p>
+<p>&nbsp;</p>
+<ol>
+<li>You can waste 1 or 2 moves before the first sequence.</li>
+<li>You can also waste 1 or 2 moves between any neighboring sequences.</li>
+<li>However, you cannot break sequences and waste moves in the middle of them.</li>
+</ol>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Competing Sequences</h1>
+<p>Sometimes it isn’t possible to complete all sequences at once within the given path length limit. In this case you have to choose which sequences to complete and which sequences to ignore. This is the time when sequence scores come into play. If you have to choose between multiple sequences, always prefer sequences with the largest sum of scores.</p>
+<p>&nbsp;</p>
+<p>For instance, on the following picture we can complete either <span style="color: #236fa1;">9B-3A-72-D4</span> or <span style="color: #236fa1;">72-D4-3A</span> but not both of them due to the maximum path length of 5 cells. We have chosen the sequence <span style="color: #236fa1;">9B-3A-72-D4</span> since it grants more score points than <span style="color: #236fa1;">72-D4-3A</span>.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="./Candidate Instructions_files/hjXDmjUbNDpy9C7bdxYxuLykSJK2kEP1mFTO3lOs.png" alt="Example of a puzzle with competing sequences" width="840" height="411"><em>Example of a puzzle with competing sequences</em></p>
+<p style="text-align: left;">&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3" style="text-align: left;">Puzzles Without a Solution</h1>
+<p style="text-align: left;">Finally, there might be puzzles that have no solution at all.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><img src="./Candidate Instructions_files/BfQR1DtppwpJE6pNGAEXJvIFpohbukDMfpkWku06.png" alt="Example of a puzzle without any solution" width="840" height="409"></p>
+<p style="text-align: center;"><em>Example of a puzzle without any solution&nbsp;</em></p>
+<p>&nbsp;</p>
+<p>The first sequence <span style="color: #236fa1;">3A-D4</span> can’t be completed since code matrix doesn’t contain code <span style="color: #169179;">D4 </span>at all. The second sequence <span style="color: #236fa1;">72-10</span> can’t be completed for another reason: codes <span style="color: #169179;">72 </span>and <span style="color: #169179;">10 </span>aren’t located in the same row or column anywhere in the matrix, and therefore can’t form a sequence.</p>
+<p>&nbsp;</p>
+<h1 class="font-bold text-3xl mb-3">Technical Details / Requirements</h1>
+<p>To get started please read the README file at the root of the Git repository. Additional details about building and running the project can be found there.</p>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Existing Source Code</h1>
+<p>Even though this is a new project you will not be starting from scratch. In the repository you will also find some preexisting source code. You must continue building on top of that preexisting source code and you should <strong>NOT DELETE</strong> any of the existing source code, files and folders <strong>NOR </strong>move or rename any of the existing files, classes, methods or variables. However, you’re free to add new source files to the project and extend existing classes with your own methods and variables.&nbsp;</p>
+<p>&nbsp;</p>
+<p>The project provides several existing classes that you should use in your work:</p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Matrix</strong> represents a code matrix with arbitrary dimensions.</li>
+<li><strong style="font-family: inherit;">Sequence </strong><span style="font-family: inherit;">stores a required sequence of codes along with their scores.</span></li>
+<li><strong style="font-family: inherit;">Path </strong><span style="font-family: inherit;">represents a path in the code matrix. It consists of multiple </span><strong style="font-family: inherit;">Position </strong><span style="font-family: inherit;">objects.</span></li>
+<li><strong style="font-family: inherit;">Position </strong><span style="font-family: inherit;">refers to a particular row and column in the code matrix.</span></li>
+<li><strong style="font-family: inherit;">PathFinder</strong><span style="font-family: inherit;"> is a puzzle solver class. It has a method named </span><em style="font-family: inherit;">run()</em><span style="font-family: inherit;"> that </span><span style="text-decoration: underline;">you need to implement</span><span style="font-family: inherit;">.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Solver Implementation</h1>
+<p>The <em>PathFinder.run()</em> method requires you to calculate the shortest path in the code matrix that contains sequences with the largest total score.</p>
+<p>&nbsp;</p>
+<p>The dimensions of the code matrix, number of sequences and length of sequences can be arbitrary. Your code shouldn’t impose any artificial limits on them.</p>
+<p>&nbsp;</p>
+<p>While developing the algorithm, use the following rules to compare different paths and determine the resulting one:</p>
+<p>&nbsp;</p>
+<ol>
+<li>When comparing different paths, always choose one that yields more score than another. For instance, a path with one completed sequence that earns 50 points is better than a path with two completed sequences that earns 30 points in total.</li>
+<li>If you have multiple paths with the same score, choose the shortest one, i.e., having fewer cells than another. The geometric distance between neighboring cells doesn’t matter.</li>
+<li>Finally, if you have multiple paths with the same score and length, return any one of them.</li>
+</ol>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Performance Considerations</h1>
+<p>There are multiple ways to implement the puzzle solving algorithm.&nbsp;</p>
+<p>&nbsp;</p>
+<p>One of them is to generate all possible paths in the code matrix, loop through them and choose the best one. This is the easiest but also the slowest approach. Solving larger matrices with larger maximum length of path might take dozens of minutes, if not hours. If you correctly implement such an algorithm, the automatic grading system will accept your solution with an average score which would be enough to successfully pass the challenge.&nbsp;</p>
+<p>&nbsp;</p>
+<p>If the simplest approach feels too easy to you and you want to achieve a perfect grade, try to implement a faster algorithm that doesn’t iterate through all possible paths and can solve puzzles with the following parameters in less than <strong>10 seconds</strong>:</p>
+<p>&nbsp;</p>
+<ul>
+<li>Matrix size: 10x10</li>
+<li>Number of sequences: 5</li>
+<li><span style="font-family: inherit;">Average length of sequences: 4</span></li>
+<li><span style="font-family: inherit;">Maximum path length: 12</span></li>
+<li><span style="font-family: inherit;">At least one solution exists&nbsp;</span></li>
+</ul>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Error Handling</h1>
+<p>Your code should properly validate input parameters, handle errors and throw exceptions. The project provides the following exception classes:</p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>InvalidArgumentError</strong>. Throw it if some of input parameters are incorrect. You should validate the following conditions:<br>
+<ol>
+<li>Code matrix should be non-empty</li>
+<li>There should be at least one sequence</li>
+<li>All sequences should be non-empty</li>
+<li>All sequences should have a score greater than zero</li>
+<li>Maximum path length should be greater than zero</li>
+</ol>
+</li>
+<li><strong>PathNotFoundError</strong>. Throw it if you can’t find any suitable path in the code matrix, i.e., the puzzle doesn’t have a solution.</li>
+</ul>
+<p>&nbsp;</p>
+<h1 class="font-bold text-2xl mb-3">Testing Your Work</h1>
+<p>In order to help you test your work, the project provides a small command-line utility with a single <strong>Application </strong>class. It basically runs <em>PathFinder </em>on different puzzles and prints their solutions or errors to the console.</p>
+<p>&nbsp;</p>
+<p>Unlike other preexisting classes, you can freely modify the source code of <strong>Application </strong>class and write your own test cases. Please use it to carefully test your algorithm on various matrices and sequences before submitting the final code.</p>
+<p>&nbsp;</p>
+<p>Good luck!</p>
+                        </div>
+                    </div>
+                
+                
+                <div class="py-4">
+                    <div wire:id="mV2MvyBAp6NY6oA6Wud8">
+        <div class="flex flex-col space-y-4">
+            </div>
+
+    </div>
+<!-- Livewire Component wire-end:mV2MvyBAp6NY6oA6Wud8 -->                </div>
+                
+
+                            </div>
+                    </div>
+    </div>
+    
+    
+    <input type="hidden" x-data="{timezoneOffset: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;timezoneOffset&#39;).defer}" x-init="timezoneOffset = (new Date()).getTimezoneOffset() / 60 * - 1" x-model="timezoneOffset" class="border border-primary" value="7">
+    
+    
+     <div x-data="{
+        rootData: {
+            autoClose: true,
+            focusables() {
+                // All focusable element types...
+                let selector = &#39;a, button, input, textarea, select, details, [tabindex]:not([tabindex=\&#39;-1\&#39;])&#39;
+
+                return [...$el.querySelectorAll(selector)]
+                    // All non-disabled elements...
+                    .filter(el =&gt; ! el.hasAttribute(&#39;disabled&#39;))
+            },
+            firstFocusable() { return this.focusables()[0] },
+            lastFocusable() { return this.focusables().slice(-1)[0] },
+            nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },
+            prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },
+            nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },
+            prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },
+            autofocus() { let focusable = $el.querySelector(&#39;[autofocus]&#39;); if (focusable) focusable.focus() },
+            closeModal() { this.autoClose ? this.show = false : $dispatch(&#39;close-modal&#39;) }
+        }
+    }">
+<div x-data="{
+        show: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;showGeneratingRepositoryModal&#39;),
+        ...rootData,
+    }" x-init="
+        $watch(&#39;show&#39;, (value) =&gt; {
+            if(value) {
+                setTimeout(autofocus, 50);
+                $dispatch(&#39;opened&#39;);
+            } else $dispatch(&#39;closed&#39;);
+        });
+    " x-on:close.stop="closeModal()" x-on:keydown.escape.window="closeModal()" x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()" x-on:keydown.shift.tab.prevent="prevFocusable().focus()" x-show="show" id="0d42dde80aa1650e1dbab54cb16815a1" class="popup fixed top-0 inset-x-0 z-50 px-0 flex items-top justify-center h-full " style="display: none;">
+    <div x-show="show" class="fixed inset-0 transform transition-all" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+        <div class="absolute inset-0 bg-grey opacity-75"></div>
+    </div>
+
+    <div x-show="show" class="popup-content flex flex-col absolute top-1/2 left-1/2 bg-white rounded-lg shadow-xl transform transition-all w-11/12 sm:w-full max-h-11/12 overflow-auto  sm:max-w-2xl" style="transform: translate(-50%, -50%) !important; display: none;" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                 <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  transition-colors duration-300 ease-linear py-2 px-4 font-bold text-primary hover:text-middle  absolute top-0 right-0 lg:top-2 lg:right-2 text-2xl" @click.prevent="closeModal()">
+        <em class="kdfi-close"></em>
+            <span class="hidden">Close Modal</span>
+    </button>
+  
+                
+        <div class="px-4 sm:px-24 py-36">
+            <div class="text-2xl text-primary font-bold sm:mb-10 text-center space-y-5">
+                <img class="h-11 w-auto inline-block animate-spin" src="./Candidate Instructions_files/spin.svg" alt="Generating..."> <br>
+                <span class="inline-block text-center">Generating Repository...</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+    
+    
+    
+     <div x-data="{
+        rootData: {
+            autoClose: true,
+            focusables() {
+                // All focusable element types...
+                let selector = &#39;a, button, input, textarea, select, details, [tabindex]:not([tabindex=\&#39;-1\&#39;])&#39;
+
+                return [...$el.querySelectorAll(selector)]
+                    // All non-disabled elements...
+                    .filter(el =&gt; ! el.hasAttribute(&#39;disabled&#39;))
+            },
+            firstFocusable() { return this.focusables()[0] },
+            lastFocusable() { return this.focusables().slice(-1)[0] },
+            nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },
+            prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },
+            nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },
+            prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },
+            autofocus() { let focusable = $el.querySelector(&#39;[autofocus]&#39;); if (focusable) focusable.focus() },
+            closeModal() { this.autoClose ? this.show = false : $dispatch(&#39;close-modal&#39;) }
+        }
+    }">
+<div x-data="{
+        show: window.Livewire.find(&#39;IdEHA2heFmHkdfxWgLkM&#39;).entangle(&#39;showInstructionsModal&#39;),
+        ...rootData,
+    }" x-init="
+        $watch(&#39;show&#39;, (value) =&gt; {
+            if(value) {
+                setTimeout(autofocus, 50);
+                $dispatch(&#39;opened&#39;);
+            } else $dispatch(&#39;closed&#39;);
+        });
+    " x-on:close.stop="closeModal()" x-on:keydown.escape.window="closeModal()" x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()" x-on:keydown.shift.tab.prevent="prevFocusable().focus()" x-show="show" id="b0b7a5c451957cf5160f13adc95d667d" class="popup fixed top-0 inset-x-0 z-50 px-0 flex items-top justify-center h-full " style="display: none;">
+    <div x-show="show" class="fixed inset-0 transform transition-all" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+        <div class="absolute inset-0 bg-grey opacity-75"></div>
+    </div>
+
+    <div x-show="show" class="popup-content flex flex-col absolute top-1/2 left-1/2 bg-white rounded-lg shadow-xl transform transition-all w-11/12 sm:w-full max-h-11/12 overflow-auto  sm:max-w-2xl" style="transform: translate(-50%, -50%) !important; display: none;" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                 <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  transition-colors duration-300 ease-linear py-2 px-4 font-bold text-primary hover:text-middle  absolute top-0 right-0 lg:top-2 lg:right-2 text-2xl" @click.prevent="closeModal()">
+        <em class="kdfi-close"></em>
+            <span class="hidden">Close Modal</span>
+    </button>
+  
+                
+        <div class="p-4 sm:p-16">
+             <div class="text-2xl text-primary font-bold -mb-2">Repository instructions</div>
+            <div class="md:px-4 text-left px-0 font-normal text-dark-grey pt-8">
+    <ol class="list-decimal text-sm pl-4 md:pl-0">
+        <li class="pb-3">First, install Git and clone the repository:</li>
+        <p class="pb-3">
+            <span class="text-primary text-sm font-normal leading-5 bg-dark-cultured py-2 pl-3 pr-12 m-px relative inline-flex items-center max-w-full select-text">
+                <span class="select-none mr-2 self-start">$ </span>
+                <span class="text-ellipsis overflow-hidden">git clone  </span>
+                <span class="copy-git-repo cursor-pointer inline-flex items-start justify-center pt-2 h-full text-lg p-0 absolute right-0 w-8 -translate-y-1/2 hover:bg-light-gray" data-clipboard-text="git clone " title="Copy"><i class="kdfi-copy"></i></span>
+            </span>
+        </p>
+        <p class="pb-3">Your password is:</p>
+        <p class="pb-3">
+            <span class="text-primary text-sm font-normal leading-5 bg-dark-cultured py-2 pl-3 pr-12 m-px relative inline-flex items-center max-w-full select-text">
+                <span class="text-ellipsis overflow-hidden"></span>
+                <span class="copy-repo-password cursor-pointer inline-flex items-start justify-center pt-2 h-full text-lg p-0 absolute right-0 w-8 -translate-y-1/2 hover:bg-light-gray" data-clipboard-text="" title="Copy"><i class="kdfi-copy"></i></span>
+            </span>
+        </p>
+        <li class="pb-3">Work on your challenge following the description above.</li>
+        <li class="pb-3">Once you are satisfied with the result, push your commits to the <span class="font-semibold">master</span> branch of the repository:</li>
+        <p class="pb-3">
+            <span class="text-primary text-sm font-normal leading-5 bg-dark-cultured py-2 pl-3 pr-12 m-px relative inline-flex items-center max-w-full select-text">
+                <span class="select-none mr-2 self-start">$ </span>
+                <span class="text-ellipsis overflow-hidden">git push origin master</span>
+                <span class="copy-git-push cursor-pointer inline-flex items-start justify-center pt-2 h-full text-lg p-0 absolute right-0 w-8 -translate-y-1/2 hover:bg-light-gray" data-clipboard-text="git push origin master" title="Copy"><i class="kdfi-copy"></i>
+            </span>
+        </span></p>
+    </ol>
+</div>        </div>
+    </div>
+</div>
+</div> 
+    
+
+     <div x-data="{
+        messages: [],
+        remove(messageId) {
+            this.messages.splice(this.messages.findIndex((message) =&gt; message.id === messageId), 1);
+        },
+    }" x-init="$nextTick(() =&gt; {
+        
+    })" @notify.window="let message = {id: Date.now(), detail: $event.detail, type:&#39;success&#39;,}; messages.push(message); setTimeout((messageId) =&gt; { remove(messageId); }, 5000,message.id);" @notifyerror.window="let message = {id: Date.now(), detail: $event.detail, type:&#39;error&#39;}; messages.push(message); setTimeout((messageId) =&gt; { remove(messageId); }, 5000,message.id)" class="fixed inset-0 flex flex-col items-end px-4 py-6 pointer-events-none sm:p-6 justify-start space-y-4 z-50">
+    <template x-for="(message, messageIndex) in messages" :key="messageIndex" hidden=""></template>
+</div>
+ 
+    <div wire:id="8jlAm2ORTRDRIGGv2ol1">
+    <form wire:submit.prevent="submitChallenge">
+         <div x-data="{
+        rootData: {
+            autoClose: true,
+            focusables() {
+                // All focusable element types...
+                let selector = &#39;a, button, input, textarea, select, details, [tabindex]:not([tabindex=\&#39;-1\&#39;])&#39;
+
+                return [...$el.querySelectorAll(selector)]
+                    // All non-disabled elements...
+                    .filter(el =&gt; ! el.hasAttribute(&#39;disabled&#39;))
+            },
+            firstFocusable() { return this.focusables()[0] },
+            lastFocusable() { return this.focusables().slice(-1)[0] },
+            nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },
+            prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },
+            nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },
+            prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },
+            autofocus() { let focusable = $el.querySelector(&#39;[autofocus]&#39;); if (focusable) focusable.focus() },
+            closeModal() { this.autoClose ? this.show = false : $dispatch(&#39;close-modal&#39;) }
+        }
+    }">
+<div x-data="{
+        show: window.Livewire.find(&#39;8jlAm2ORTRDRIGGv2ol1&#39;).entangle(&#39;show&#39;).defer,
+        ...rootData,
+    }" x-init="
+        $watch(&#39;show&#39;, (value) =&gt; {
+            if(value) {
+                setTimeout(autofocus, 50);
+                $dispatch(&#39;opened&#39;);
+            } else $dispatch(&#39;closed&#39;);
+        });
+    " x-on:close.stop="closeModal()" x-on:keydown.escape.window="closeModal()" x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()" x-on:keydown.shift.tab.prevent="prevFocusable().focus()" x-show="show" id="a7dd12b1dab17d25467b0b0a4c8d4a92" class="popup fixed top-0 inset-x-0 z-50 px-0 flex items-top justify-center h-full " style="display: none;">
+    <div x-show="show" class="fixed inset-0 transform transition-all" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+        <div class="absolute inset-0 bg-grey opacity-75"></div>
+    </div>
+
+    <div x-show="show" class="popup-content flex flex-col absolute top-1/2 left-1/2 bg-white rounded-lg shadow-xl transform transition-all w-11/12 sm:w-full max-h-11/12 overflow-auto  sm:max-w-2xl" style="transform: translate(-50%, -50%) !important; display: none;" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                 <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  transition-colors duration-300 ease-linear py-2 px-4 font-bold text-primary hover:text-middle  absolute top-0 right-0 lg:top-2 lg:right-2 text-2xl" @click.prevent="closeModal()">
+        <em class="kdfi-close"></em>
+            <span class="hidden">Close Modal</span>
+    </button>
+  
+                
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <div class="flex flex-col items-center text-center space-y-2">
+                            <h3 class="flex items-center justify-center text-lg text-primary font-bold">
+                    Are you sure you want to submit the challenge ?
+                </h3>
+                        
+                    </div>
+
+                    <div class="mt-5 text-center">
+                When submitted, the repository will be locked and the challenge will be sent for evaluation. We will be in touch once your challenge has been evaluated.
+            </div>
+            </div>
+
+    <div class="px-6 py-4 bg-gray-100 text-right">
+        <div class="flex flex-wrap items-center justify-center space-y-3 sm:space-y-0 -mx-2">
+                    <div class="w-full sm:w-1/2 px-2">
+                         <button type="button" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 border  border-primary text-primary font-semibold hover:border-middle hover:text-middle w-full py-3 rounded-lg" wire:click="$toggle(&#39;show&#39;)" wire:loading.attr="disabled" wire:loading.class="cursor-not-allowed woopra-submit-challenge" wire:target="submitChallenge">
+        <span>No</span>
+    </button>
+  
+                    </div>
+                    <div class="w-full sm:w-1/2 px-2">
+                         <button type="submit" class="rounded-md text-sm leading-5 font-medium focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out  py-2 px-4 font-bold border  text-white bg-primary hover:bg-middle border-primary hover:border-middle w-full py-3 rounded-lg woopra-submit-challenge" wire:loading.attr="disabled" wire:loading.class="cursor-not-allowed" wire:target="submitChallenge">
+        <span class="flex items-center hidden" wire:loading.class.remove="hidden" wire:target="submitChallenge">
+                                 <span>
+    <svg class="animate-spin -ml-1 mr-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+</span> 
+                                <span>Processing</span>
+                            </span>
+                            
+                            <span wire:loading.class="hidden" wire:target="submitChallenge">Yes</span>
+    </button>
+ 
+ 
+                    </div>
+                </div>
+    </div>
+    </div>
+</div>
+</div> 
+ 
+    </form>
+</div>
+<!-- Livewire Component wire-end:8jlAm2ORTRDRIGGv2ol1 -->    
+    <div class="flex items-center justify-center fixed z-50 w-full h-full top-0 left-0 bg-white bg-opacity-50" x-show="loaderState" style="display: none">
+    <img class="h-11 w-auto inline-block animate-spin hidden-safari" src="./Candidate Instructions_files/spin.svg" alt="Loading...">
+    <span class="text-xl font-bold text-primary hidden visible-safari">Loading...</span>
+</div>
+    </div>
+<!-- Livewire Component wire-end:IdEHA2heFmHkdfxWgLkM -->
+        
+        <script src="./Candidate Instructions_files/livewire.js.download" data-turbo-eval="false" data-turbolinks-eval="false"></script><script data-turbo-eval="false" data-turbolinks-eval="false">window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'YvZVqLCaxLt2iDlXCOzvtc4rpDTUSMcMfDBjdmiG';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+        <script src="./Candidate Instructions_files/chargebee.js.download"> </script>
+        
+        <script src="./Candidate Instructions_files/manifest.js.download"></script>
+        <script src="./Candidate Instructions_files/vendor.js.download"></script>
+        <script src="./Candidate Instructions_files/app.js.download"></script>
+        <script src="./Candidate Instructions_files/prism.js.download"></script>
+
+        <script defer="" src="./Candidate Instructions_files/cdn.min.js.download"></script>
+        <script defer="" src="./Candidate Instructions_files/cdn.min.js(1).download"></script>
+       
+            
+        <script src="./Candidate Instructions_files/flatpickr"></script>
+        <script src="./Candidate Instructions_files/tinymce.min.js.download" integrity="sha512-MbhLUiUv8Qel+cWFyUG0fMC8/g9r+GULWRZ0axljv3hJhU6/0B3NoL6xvnJPTYZzNqCQU3+TzRVxhkE531CLKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./Candidate Instructions_files/cropper.min.js.download" integrity="sha512-ooSWpxJsiXe6t4+PPjCgYmVfr1NS5QXJACcR/FPpsdm6kqG1FmQ2SVyg2RXeVuCRBLr0lWHnWJP6Zs1Efvxzww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+                        
+                    <!-- Start of Woopra Code Production-->
+            <script>
+            !function(){var t,o,c,e=window,n=document,r=arguments,a="script",i=["call","cancelAction","config","identify","push","track","trackClick","trackForm","update","visit"],s=function(){var t,o=this,c=function(t){o[t]=function(){return o._e.push([t].concat(Array.prototype.slice.call(arguments,0))),o}};for(o._e=[],t=0;t<i.length;t++)c(i[t])};for(e.__woo=e.__woo||{},t=0;t<r.length;t++)e.__woo[r[t]]=e[r[t]]=e[r[t]]||new s;(o=n.createElement(a)).async=1,o.src="https://static.woopra.com/js/w.js",(c=n.getElementsByTagName(a)[0]).parentNode.insertBefore(o,c)}("woopra");
+
+            woopra.config({
+                domain: "app.codeaid.io",
+                outgoing_tracking: true,
+                download_tracking: true,
+                click_tracking: true
+            });
+    
+            
+            woopra.track();
+
+            </script>
+            <!-- End of Woopra Code  Production-->
+        
+            <script>
+        function checkStatus(){
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    let result = JSON.parse(xmlHttp.responseText);
+
+                    if(result && result.status != 2  && result.status != 7 ){
+                        window.location.reload();
+                    }
+                }
+            }
+            xmlHttp.open( "GET", '/status/4801', true ); 
+            xmlHttp.send( null );
+        }
+
+        setInterval(function() {
+            checkStatus();
+        }, 60 * 1000); // 60 * 1000 milsec        
+    </script>
+        
+    
+
+</body></html>
